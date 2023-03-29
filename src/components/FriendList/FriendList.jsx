@@ -1,14 +1,23 @@
+import {
+  Friend,
+  Status,
+  AvatarWrapper,
+  FriendName,
+} from './FriendsList.styled';
+
 export const FriendList = ({ friend }) => {
   return (
-    <li className="item">
-      <span className="status"></span>
-      <img
-        className="avatar"
-        src={friend.avatar}
-        alt="User avatar"
-        width="48"
-      />
-      <p className="name">{friend.name}</p>
-    </li>
+    <Friend className="item">
+      <Status isOnline={friend.isOnline} className="status"></Status>
+      <AvatarWrapper>
+        <img
+          className="avatar"
+          src={friend.avatar}
+          alt="User avatar"
+          width="48"
+        />
+      </AvatarWrapper>
+      <FriendName className="name">{friend.name}</FriendName>
+    </Friend>
   );
 };

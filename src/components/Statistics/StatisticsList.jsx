@@ -1,14 +1,22 @@
 import { Statistics } from './Statistics';
+import {
+  StatisticsSection,
+  TitleWrapper,
+  Title,
+  List,
+} from './StatisticsList.styled';
 
 export const StatisticsList = ({ statistics }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
-      <ul>
+    <StatisticsSection className="statistics">
+      <TitleWrapper>
+        <Title className="title">Upload stats</Title>
+      </TitleWrapper>
+      <List>
         {statistics.map(stat => (
           <Statistics key={stat.id} stat={stat} />
         ))}
-      </ul>
-    </section>
+      </List>
+    </StatisticsSection>
   );
 };

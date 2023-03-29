@@ -6,22 +6,23 @@ import { FriendListItem } from './FriendList/FriendListItem';
 import friends from '../data/friends.json';
 import { TransactionTable } from './TransactionHistory/TransactionTable';
 import transactions from '../data/transactions.json';
+import { Section } from './App.styled';
 
 export const App = () => {
   return (
     <>
-      <div>
+      <Section>
         <Profile profiles={profiles} />
-      </div>
-      <div>
+      </Section>
+      <Section>
         <StatisticsList statistics={statistics} />
-      </div>
-      <div>
+      </Section>
+      <Section>
         <FriendListItem friends={friends} />
-      </div>
-      <div>
+      </Section>
+      <Section>
         <TransactionTable transactions={transactions} />
-      </div>
+      </Section>
     </>
   );
 };

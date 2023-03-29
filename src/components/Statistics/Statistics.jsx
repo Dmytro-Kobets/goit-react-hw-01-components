@@ -1,10 +1,10 @@
-import { StatisticsList } from './StatisticsList';
+import { Item, ItemTitle, ItemPercentage } from './StatisticsList.styled';
 
 export const Statistics = ({ stat }) => {
   return (
-    <li className="item">
-      <span className="label">{stat.label}</span>
-      <span className="percentage">{stat.percentage}</span>
-    </li>
+    <Item className="item">
+      <ItemTitle className="label">{stat.label}</ItemTitle>
+      <ItemPercentage className="percentage">{stat.percentage}%</ItemPercentage>
+    </Item>
   );
 };
