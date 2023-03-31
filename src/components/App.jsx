@@ -15,7 +15,7 @@ export const App = () => {
         <Profile profiles={profiles} />
       </Section>
       <Section>
-        <StatisticsList statistics={statistics} />
+        <StatisticsList statistics={statistics} title="Upload Stats" />
       </Section>
       <Section>
         <FriendListItem friends={friends} />
