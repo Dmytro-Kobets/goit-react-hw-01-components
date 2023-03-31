@@ -4,6 +4,7 @@ import {
   AvatarWrapper,
   FriendName,
 } from './FriendsList.styled';
+import PropTypes from 'prop-types';
 
 export const FriendList = ({ friend }) => {
   return (
@@ -20,4 +21,13 @@ export const FriendList = ({ friend }) => {
       <FriendName className="name">{friend.name}</FriendName>
     </Friend>
   );
+};
+
+FriendList.propTypes = {
+  friend: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
 };
